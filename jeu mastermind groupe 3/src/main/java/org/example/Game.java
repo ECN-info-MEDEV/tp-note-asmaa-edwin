@@ -48,6 +48,8 @@ public class Game {
  void codemakerTurn() {
         Scanner input = new Scanner(System.in);
         System.out.println("Entrez le code secret svp (choose from: " + String.join(", ", COLORS) + "): ");
+        System.out.println("Separated by a comma and a space ");
+
 
         secretCode = new String[NUM_PEGS];
         for (int i = 0; i < NUM_PEGS; i++) {
@@ -68,6 +70,7 @@ public class Game {
         int whitePegs = 0;
 
         System.out.println("Enter your guess (choose from: " + String.join(", ", COLORS) + "): ");
+        System.out.println("Separated by a comma and a space ");
         for (int i = 0; i < NUM_PEGS; i++) {
             guess[i] = input.next();
         }
