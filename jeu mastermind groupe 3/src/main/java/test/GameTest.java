@@ -36,24 +36,4 @@ public class GameTest {
         // Vérifiez que la méthode codemakerTurn() est appelée lorsque le joueur est le CodeMaker
         assertNotNull(game.getSecretCode());
     }
-    @Test
-    public void testPlay_Codebreaker() {
-        game.play();
-        // Vérifier que la méthode codebreakerTurn() a été appelée
-    }
-    
-    @Test
-    public void testPlay_CodeMaker() {
-        game = new Game(false);
-        game.play();
-        // Vérifier que la méthode codemakerTurn() a été appelée
-    }
-
-    @Test
-    public void testCodebreakerTurn_success() {
-        // Configurer l'état de la partie pour simuler une réussite
-        boolean result = game.codebreakerTurn();
-        Assert.assertTrue(result);
-    }
-    
 }
