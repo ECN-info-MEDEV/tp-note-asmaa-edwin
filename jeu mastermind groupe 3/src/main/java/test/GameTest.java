@@ -9,9 +9,9 @@ public class GameTest {
         Game game = new Game(false);
         game.codemakerTurn();
         // Vérifiez que le code secret a bien été défini
-        assertNotNull(game.secretCode);
+        assertNotNull(game.getSecretCode());
         // Vérifiez que le code secret contient 4 éléments
-        assertEquals(4, game.secretCode.length);
+        assertEquals(4, game.getSecretCode().length);
     }
     
     @Test
@@ -20,9 +20,9 @@ public class GameTest {
         game.codemakerTurn();
         game.codebreakerTurn();
         // Vérifiez que le score du Codebreaker est correctement incrémenté lorsqu'il a deviné le code secret
-        assertEquals(1, game.score[0]);
+        assertEquals(1, game.getScore());
         // Vérifiez que la partie est terminée lorsqu'il a deviné le code secret
-        assertTrue(game.gameOver);
+        assertTrue(game.isGameOver());
     }
     
     @Test
@@ -30,10 +30,10 @@ public class GameTest {
         Game game = new Game(true);
         game.play();
         // Vérifiez que la méthode codebreakerTurn() est appelée lorsque le joueur est le Codebreaker
-        assertEquals(1, game.score[0]);
+        assertEquals(1, game.getScore());
         game = new Game(false);
         game.play();
         // Vérifiez que la méthode codemakerTurn() est appelée lorsque le joueur est le CodeMaker
-        assertNotNull(game.secretCode);
+        assertNotNull(game.getSecretCode());
     }
 }

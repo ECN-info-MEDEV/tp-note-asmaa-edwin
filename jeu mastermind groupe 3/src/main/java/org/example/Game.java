@@ -18,6 +18,18 @@ public class Game {
     private boolean isCodebreaker; // Booléen indiquant si c'est le tour de l'opérateur Codebreaker
     private boolean gameOver; // Booléen indiquant si la partie est terminée
 
+    public String[] getSecretCode() {
+        return secretCode;
+    }
+
+    public int[] getScore() {
+        return score;
+    }
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
     /**
 
      Le constructeur de la classe Game prend en entrée un booléen qui indique si l'opérateur jouant est l'opérateur Codebreaker ou CodeMaker.
